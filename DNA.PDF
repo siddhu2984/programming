@@ -1,0 +1,31 @@
+dna = str(input())
+A=0
+C=0
+T=0
+G=0
+a="a"
+for i in dna:
+    if i == 'A':
+        A = A + 1
+    elif i == 'C':
+        C = C + 1
+    elif i == 'T':
+        T = T + 1
+    elif i == 'G':
+        G = G + 1
+    else:
+        a="Invalid input"
+        break
+
+if a == "Invalid input":
+    print(a)
+else:
+    print("A")
+    print(A)
+    print("C")
+    print(C)
+    print("T")
+    print(T)
+    print("G")
+    print(G)
+        
