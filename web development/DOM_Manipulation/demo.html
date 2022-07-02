@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM manipulation</title>
+    </head>
+
+    <body>
+        <!--<p id="my_paragraph"></p>
+        <input type="text" id="uname"><br><br>
+        <input type="password" id="upwd"><br><br>
+        <button onclick="myfun()">Login</button>
+        <p id="status"></p>-->
+
+        <!--<p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>-->
+
+        <!--<p class="c_1"></p>
+        <p class="c_1"></p>
+        <p class="c_1"></p>
+        <p class="c_1"></p>
+        <p class="c_1"></p>
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <p>paragraph 3</p>
+        <div>DIVISION 1</div>
+        <div>DIVISION 2</div>
+        <p>paragraph 3</p>
+        <div>DIVISION 3</div>
+        <button>On click</button>-->
+        <div>
+            <strong>hello, welcome to element</strong>
+        </div>
+    </body>
+    <script>
+        //document.getElementById("my_paragraph").innerHTML=" welcome to DOM manipulation";
+
+        /*function myfun(){
+            if(document.getElementById("uname").value==="ashokit"&& document.getElementById("upwd").value==="ashokit123"){
+                document.getElementById("status").innerHTML="success";
+            }
+            else{
+                document.getElementById("status").innerHTML="fai;";
+            }
+        }*/
+        /*document.getElementsByTagName("p")[0].innerHTML="HELLO_1";
+        document.getElementsByTagName("p")[1].innerHTML="HELLO_2";
+        document.getElementsByTagName("p")[2].innerHTML="HELLO_3";
+        document.getElementsByTagName("p")[3].innerHTML="HELLO_4";
+        document.getElementsByTagName("p")[4].innerHTML="HELLO_5";*/
+
+        /*let allParagraphs = document.getElementsByTagName("p");
+        for(let p of allParagraphs){
+            p.innerHTML="Welcome";
+        }*/
+        /*let allparageaphs = document.getElementsByClassName("c_1");
+        for(let p of allparageaphs){
+            p.innerHTML="hello";
+        }*/
+        /*let element = document.querySelector("p");
+        element.style.color= "red";
+
+        let allelement = document.querySelectorAll("p");
+        for(let p of allelement){
+            p.style.color="yellow";
+        }*/
+
+        /*let divsi = document.querySelector("div");
+        divsi.style.color="green";
+
+        let divsi3 = document.querySelectorAll("div");
+        for(let d of divsi3){
+            d.style.color="green";
+        }*/
+        /*let sts = document.querySelector("button");
+        sts.onclick=myfun();
+        function myfun(){
+            console.log("Hello");
+        };*/
+
+        /*let btn = document.querySelector("button");
+        btn.addEventListener("click",myfun);
+        function myfun(){
+            console.log("welcome");
+        };*/
+
+        /*let btn=document.querySelector("button");btn.addEventListener("click",myfun);
+        function myfun(){
+            console.log("welcome");
+        };
+        let div = document.querySelector("div");
+        div,setAttribute("uname","hello");*/
+
+        /*let h1 = document.createElement("h1");
+        h1.textContent="data added dynamically";
+
+        let div = document.querySelector("div");
+        let strong = document.querySelector("strong");
+        div.replaceChild(h1,strong);
+
+        document.createElement("em");
+        em.textContent="empphazed text";
+        div.replaceChild(em,h1);*/
+        let strong = document.querySelector("strong");
+        let strong1 = strong.cloneNode(true);
+        let div=document.querySelector("div");
+        div.appendChild(strong1);
+    </script>
+</html>

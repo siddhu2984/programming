@@ -1,0 +1,168 @@
+<!--
+    used to arange the data in rows and columns 
+-->
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+    </head>
+    <style>
+        table{
+            background:linear-gradient(45%,black,red);
+        }
+    </style>
+    <body>
+        <table border="1px" 
+               align="center"
+               cellspacing='10px'
+               cellpadding="10px">
+               
+            <tr>
+                <th>S.no</th>
+                <th>P_ID</th>
+                <th>name</th>
+                <th>cost</th>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>sass</td>
+                <td>naass</td>
+                <td>2000000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>sass</td>
+                <td>naass</td>
+                <td>3000000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>sass</td>
+                <td>naass</td>
+                <td>4000000</td>
+            </tr>
+            <tr></tr>
+        </table>
+    </body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <table border = "1px"
+               align="center"
+               cellspacing="10px"
+               cellpadding="10px">
+            <tr>
+                <th>S.NO</th>
+                <th colspan="2">name and brand</th>
+                
+                <th>cost</th>
+                <th>image</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>mountain</td>
+                <td>mountain</td>
+                <td>1000000000</td>
+                <td><img src="images/2021-09-10 (3).png"width="100px"></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><br>1<br>2</td>
+                <td colspan="2">ssksks and adadasd</td>                
+                <td>100dasd0000000</td>
+                <td><img src="images/2021-12-27 (4).png"width="100px"></td>
+            </tr>
+            <tr>
+                <td>ssksks</td>
+                <td>adadasd</td>
+                <td>100dasd0000000</td>
+                <td><img src="images/2021-12-27 (4).png"width="100px"></td></tr>
+            <tr><td>2</td>
+                <td>ssksks</td>
+                <td>adadasd</td>
+                <td>100dasd0000000</td>
+                <td><img src="images/2021-12-27 (4).png"width="100px"></td></tr>
+            <tr><td>2</td>
+                <td>ssksks</td>
+                <td>adadasd</td>
+                <td>100dasd0000000</td>
+                <td><img src="images/6ba225b788ab3b65086a51d806c370bb.jpg"width="100px"></td></tr>
+        </table>
+
+    </body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>tables with css</Title>
+        <style>
+            table,th,td{
+                border: 1px solid gray;
+            }
+            table{
+                width: 100%;
+                text-align: center;
+                border-collapse: collapse ;
+            }
+            th{
+                height: 50px;
+                background: linear-gradient(45deg,red,blue);
+                color: white;
+            }
+            td{
+                text-align: center;
+                height: 30px;
+                vertical-align: bottom;
+            }
+            tr:nth-child(even){
+                background-color: antiquewhite;
+            }
+            tr:nth-child(odd){
+                background-color: skyblue;
+            }
+            tr:hover{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr><th>S.no</th>
+                <th>P_ID</th>
+                <th>name</th>
+                <th>cost</th></tr>
+
+            <tr><td>1</td>
+                <td>kfhnfdkndfgh</td>
+                <td>idhsdhfj</td>
+                <td>1000000</td></tr>
+
+            <tr><td>2</td>
+                <td>gjdhsmdlgl[</td>
+                <td>jdjgbjbjsd;</td>
+                <td>2000000</td></tr>
+
+            <tr><td>3</td>
+                <td>jbdjhdjhg</td>
+                <td>adhjdiajssfs</td>
+                <td>3000000</td></tr>
+
+            <tr><td>4</td>
+                <td>ads;a,s;</td>
+                <td>adadladadaass</td>
+                <td>4000000</td></tr>
+        </table>
+    </body>
+</html>
