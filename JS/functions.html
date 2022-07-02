@@ -1,0 +1,315 @@
+<!--/*
+functions
+----------
+- particular bussiness logic called as functions
+- functions are used to reuse the business logic
+- we have following type of functions 
+        - named functions
+        - anonymous functions/arrow function/callback function/nameless function
+        - rest parameters in function
+        - default parameters in functions
+        - optional parameters in functions
+        - IIFE (imediate invokable functional expresinon)
+        - constructor functions
+
+named function
+--------------
+ the fn with the name called as named function 
+ we will define named function with function keyword
+
+ syntax
+ ------
+ 1, function definition
+           - function functionname(parameter1,2,3,4....){
+               logic
+           }
+ 2, function calling
+            - functionname(arg1,2,3,4,.....)
+            {
+                logic
+            } 
+
+        
+<script>
+    function fun_one(){
+        return " welcome to named fn";
+    };
+    console.log( fun_one() );
+</script>
+
+<script>
+    function fun_one(){
+        return "hello";
+    }
+    console.log( fun_one );
+</script>
+
+<script>
+    function fun_two(p1,p2,p3){
+        console.log(p1,p2,p3);
+    };
+    fun_two("hello1","hello2","hello3");
+    fun_two();// undefined undefined undefined
+</script>-->
+<!--
+<script>
+    function fun_1(){
+        return fun_2();
+    }
+
+    function fun_2(){
+        return "hello";
+    }
+    fun_1()();
+</script>-->
+<!--
+    anonymous function 
+    ------------------
+        - the fn without name is called anonymous function
+        - also called arrow function
+        - we will represent the arrow fn with the help of arrow symbol.
+        - arrow function behaves like callback function
+
+    syntax
+    ------
+        - function definition
+                  - let variablename = (parameter1,p2,p3.....)=>{ 
+                  // business logic
+                  }
+            fn calling
+                  - variablename(arg1,2,3...)
+
+
+
+<script>
+    let fun_1=()=>{
+        return "welcome to arrow fn";
+    }
+
+    console.log(fun_1());
+</script>
+
+<script>
+    let fun_1=(p1,p2,p3)=>{
+        return `${p1}<==>${p2}<==>${p3}`;
+    }
+
+    console.log(fun_1("a1","as","aad"));
+</script>
+
+<script>
+    let fun_1=(p1,p2)=>{
+        console.log(p1(),p2()); 
+    }
+    fun_1( ()=>{
+        return "hello";
+    },()=>{
+        return "world";
+    }); // arrow fn
+</script>
+
+<script>
+    let fun_1=()=>{
+        return "hello";
+    };
+
+    console.log(fun_1);
+</script>
+
+Rest parameters in functions
+----------------------------
+function fun_1(.....p1){
+
+}
+fun_1("h1","h2");
+
+    - we will store more than one valu in a single parameter
+    - "...." called as spread operator or rest operatot
+
+    - it is intoduced in the function E56
+
+    - we can have only one spread oper per fn
+    
+    - position of spread oper must be "lost" in parameter
+
+
+<script>
+    function fun_one(...p1){
+        console.log(p1);
+    }
+    fun_one("hello");
+    fun_one("hello","hello2");
+
+</script>
+
+<script>
+    function fun_one(p1,...p2){
+        console.log(p1,p2);
+    }
+    fun_one();
+    fun_one("hello");
+    fun_one("hello","hello2","hello2");
+</script>
+
+DEFAULT PARAMETER IN fn
+-------------------------
+      - while defining the fn parameters initialized with default values...
+      - intoduced in ES6
+
+
+<script>
+    function fun_one(p1="h1ko"){
+        console.log(p1);
+    }
+    fun_one();
+</script>
+
+
+IIFE
+-----
+     - IIFE = imediate invokable functional expression
+     - ES9
+     - when it is created , it will execute automitacally..
+     syntax
+     ------ 
+     ((p1,p2,p3...)=>{
+        // business logic
+     })(arg1,arg2,3);
+
+
+<script>
+    (()=>{
+        console.log("welcome to IIFE")
+    })();
+</script>    
+
+<script>
+    ((p1,p2,p3)=>{
+        console.log(p1,p2,p3);
+    })("hello","haiii","yyy");
+</script>
+
+generators
+-------------
+     - used to control flow of execusion
+     - will return cursor mechanism
+     - by using cursor , we can can control the flow of execusion
+     - generator fn will prefix with * symbol
+     - inside generator fn all statement should prefix with yield keyword
+
+<script>
+    function *fun_1(){
+        yield "hello";
+        yield "hello1";
+        yield "hello2";
+        yield "hello3";
+        yield "hello4";
+    }
+    let cursor = fun_1();
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+    console.log(cursor.next());
+</script>
+
+<script>
+    function *fun_1() {
+        yield "hello";
+        yield *fun_2();
+    }
+    function *fun_2(){
+        yield "hello1";
+        yield *fun_3();
+    }
+    function *fun_3(){
+        yield "hello2";
+    }
+
+    let cursor = fun_1();
+    for(let i=0;i<3;i++){
+        console.log(cursor.next());
+    }
+</script>
+
+    encapsulation of variables and function called as class
+
+    before "E56" version we will create classes by using constructor function
+
+    in constructor fn, all the members(variables and function) starts with "this" keyword
+
+    we will create obect to the class using new keyword 
+
+
+
+<script>
+    function class_1(){
+        this.var_one = "ReactJS";
+        this.var_two = "NodeJS";
+        this.var_three = "MangoDB";
+        }
+    let obj =  new class_1();
+    console.log(obj.var_one, obj.var_two, obj.var_three);
+</script>
+
+<script>
+    function class_2(p1,p2,p3){
+        this.var_one = p1;
+        this.var_two = p2;
+        this.var_three = p3;
+    }
+    let obj1 = new class_2("hello_1","hello_2","hello_3");
+    console.log(obj1.var_one, obj1.var_two, obj1.var_three);
+</script>
+
+
+<script>
+    function fun_one(){
+
+    };
+    fun_one.prototype.var_1 = "hello_1";
+    fun_one.prototype.var_2 = "hello_3";
+    fun_one.prototype.var_3 = "hello_2";
+
+    let obj = new fun_one();
+    console.log(obj.var_1, obj.var_2,obj.var_3);
+</script>
+
+Optional parameter in fn
+---------------------------
+
+    - while calling the fn we will make few arguments are optional
+
+    - optional parameter will work in typescript environment
+
+    - typescript is thr programming language
+
+    - typescript released by microsoft 
+
+    - it follows the oops principles
+
+    - we will represent optional parameters with ? mark symbol 
+
+    - we will install typescript by using following command
+          - npm install -g typescript 
+          - npm stands for node pakaging manager
+          - npm presrnt in node js
+          -   -g stands for global install
+     - we will save typescript with .ts extension      
+     - in general, browses unable to understand typescript
+     
+     - so a delevepor we must convert typescript to equalent java script 
+     - tsc is the tool used to perform transpilation 
+     - tsc - typescript compiler 
+
+     > tsc demo.ts 
+
+     o/p 
+     demo.js 
+
+     >node demo.js 
+-->
+
+

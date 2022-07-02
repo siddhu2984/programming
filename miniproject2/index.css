@@ -1,0 +1,32 @@
+div{
+    border: 1px solid red ;
+    background-color: salmon;
+    width: 17%;
+    height: 100vh;
+    float: right;
+}
+body{
+    margin:0px;
+    padding:0px;
+}
+a{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid black;
+    background: linear-gradient(90deg,red,salmon);
+    border-radius: 15px;
+}
+a:hover{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.my_circle{
+    font-size: 100px;
+    color: aliceblue;
+    display: block;
+    text-align: center;
+    margin: 30px; 
+}

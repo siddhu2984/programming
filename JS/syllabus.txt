@@ -1,0 +1,37 @@
+1, intro
+
+2, variable
+
+      var, let, const
+
+3, function
+
+    named function
+    arrow function
+    reat parameter function
+    optional parameter function
+    generator function
+    IIFE
+
+4,  arrays manipulation
+            []
+
+5, JSON(Used to transfer over the internet)
+        JSON server
+            rest API'S 
+
+6,  AJAX calls (jquery)
+
+7, callBack
+
+8, promises
+
+9, Debouncing
+
+10, throating
+
+11, cell(), apply() and blind()
+
+12, DOM manipulation
+
+13, Debugging of JS applications    
